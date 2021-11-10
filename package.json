@@ -1,0 +1,30 @@
+{
+  "name": "SQL_Employee_Tracker",
+  "version": "1.0.0",
+  "description": "An employee management tool for business owners.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MA-FS/SQL_Employee_Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MA-FS/SQL_Employee_Tracker/issues"
+  },
+  "homepage": "https://github.com/MA-FS/SQL_Employee_Tracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "dotenv": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "mysql2": "^2.3.3-rc.0"
+  }
+}
