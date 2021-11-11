@@ -127,6 +127,44 @@ const newRole = async () => {
   
     chooseRequest()   
 }
+
+// Delete a Department
+const delDept = async () => {
+    const deptArr = await choices.deptChoices()
+  
+    const dept = await inquirer.prompt([
+      {
+        type: "list",
+        name: "dept_id",
+        message: "Which Department do you want to Delete?",
+        choices: deptArr,
+        loop: false,
+      }
+     ])
+  
+    await sql.deleteDept(dept)
+  
+    chooseRequest()
+}
+
+// Delete a Role
+const delRole = async () => {
+    const roleArr = await choices.roleChoices()
+  
+    const role = await inquirer.prompt([
+      {
+        type: "list",
+        name: "role_id",
+        message: "Which Role do you want to Delete?",
+        choices: roleArr,
+        loop: false,
+      }
+     ])
+  
+    await sql.deleteRole(role)
+  
+    chooseRequest()
+}
   
 // Delete an Employee
 const delEmp = async () => {
@@ -330,9 +368,8 @@ const chooseRequest = () => {
                     'Update Employees Manager',
                     'View Employees by Manager',
                     'View Employees by Department',
-                    //TODO
-                    //Delete Departments
-                    //Delete Roles
+                    'Delete a Department',
+                    'Delete a Role',
                     'Delete an Employee', 
                     'View Department Budget'                 
                    ],
@@ -353,6 +390,12 @@ const chooseRequest = () => {
             break
           case 'Add an Employee':
             newEmp()
+            break
+          case 'Delete a Department':
+            delDept()
+          break     
+          case 'Delete a Role':
+            delRole()
             break
           case 'Delete an Employee':
             delEmp()
