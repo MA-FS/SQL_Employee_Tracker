@@ -33,3 +33,5 @@ Functions include;
 https://github.com/MA-FS/SQL_Employee_Tracker
 
 *Walkthrough Video*
+
+https://drive.google.com/file/d/1hIKvME_XENPjHCPXiPqYSfBqIJg8VE8b/view
