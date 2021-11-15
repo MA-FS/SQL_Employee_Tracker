@@ -22,6 +22,7 @@ CREATE TABLE role (
     PRIMARY KEY (id),
     FOREIGN KEY (department_id)
     REFERENCES department(id)
+    ON DELETE CASCADE
 );
 
 -- Create employee table
